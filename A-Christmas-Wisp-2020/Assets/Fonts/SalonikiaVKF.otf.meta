@@ -1,17 +1,16 @@
 fileFormatVersion: 2
-guid: 0f22f86dfcb88bb4b806626e33896f5e
+guid: 9f055c379aeaf8443abf21d86151551b
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 300
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Mountains of Christmas
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 0d3878865c431bf4b9da0082f570cc80, type: 3}
+  - Salonikia VKF
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
