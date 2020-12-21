@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0f22f86dfcb88bb4b806626e33896f5e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mountains of Christmas
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0d3878865c431bf4b9da0082f570cc80, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
