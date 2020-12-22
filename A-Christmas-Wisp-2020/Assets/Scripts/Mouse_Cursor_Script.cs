@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Mouse_Cursor_Script : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private Vector2 direction;
+    public float speed;
 
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -15,8 +18,12 @@ public class Mouse_Cursor_Script : MonoBehaviour
     {
         // Wisp Sprite
         Cursor.visible = false;
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        direction = (cursorPos - transform.position).normalized;
+        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+
+        //transform.position = cursorPos;
     }
 
     // Killing the Elves
