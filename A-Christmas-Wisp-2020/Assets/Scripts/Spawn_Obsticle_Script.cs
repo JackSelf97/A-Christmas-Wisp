@@ -14,7 +14,7 @@ public class Spawn_Obsticle_Script : MonoBehaviour
         if (sentObs == false)
         {
             // Pick a random number
-            int randomNum = Random.Range(0, 4);
+            int randomNum = Random.Range(1, 4);
             Debug.Log(randomNum);
 
             if (randomNum == 1)

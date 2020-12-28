@@ -18,6 +18,6 @@ public class GameManager_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Elves Killed: " + score;
+        scoreText.text = "Elves Killed " + score;
     }
 }
