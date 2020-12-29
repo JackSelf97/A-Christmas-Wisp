@@ -12,14 +12,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ab2ce870e40ac429e6f3b2bbb2b093, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: a3fd3f9c7f30954ebe7afb9ae1baa02d
+    GuidInternal: 
+    m_lastTime: -8585923492394875585
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e51b8a37e040ac419af1756c7266b6ec
+    GuidInternal: 
+    m_lastTime: -8585923492395264339
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 2214d0e1ac559643a8b784d56fdfd5e0
+    GuidInternal: 
+    m_lastTime: -8585923487275668934
+    List:
+    - name: Main
+      guid: a807deef70c5cf45bd2020394b38cb5d
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4dcb787115930547bd7b8a719ef6634c
+    GuidInternal: 
+    m_lastTime: -8585923488817493718
+    List:
+    - name: Music
+      guid: 11074ba49d93724e814013095c2b09fe
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 3
+      Path: Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 063a60e5f04e3346b817167bc9ee61a0
+    GuidInternal: 
+    m_lastTime: -8585923492395304446
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 97eb71531cc4394f9319cc495e841396
+    GuidInternal: 
+    m_lastTime: -8585923492394905512
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 51d2881406e2ef4498f8bb5474108902
+    GuidInternal: 
+    m_lastTime: -8585923492395284523
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: c6ef5d4345cac940be1650a2acd78ff6
+    GuidInternal: 
+    m_lastTime: -8585923492395590267
+    List: []
+  ExpandedItems:
+  - /A-Christmas-Wisp-2020_WwiseProject
+  - /A-Christmas-Wisp-2020_WwiseProject/Events
+  - /A-Christmas-Wisp-2020_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

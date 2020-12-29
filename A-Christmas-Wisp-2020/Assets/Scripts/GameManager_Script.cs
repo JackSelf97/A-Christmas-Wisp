@@ -31,20 +31,20 @@ public class GameManager_Script : MonoBehaviour
     public bool increaseCheck = false;
 
     // Only have one GameManager at any one time
-    void Awake()
-    {
-        if (GM_Script == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            GM_Script = this;
-        }
+    //void Awake()
+    //{
+    //    if (GM_Script == null)
+    //    {
+    //        DontDestroyOnLoad(gameObject);
+    //        GM_Script = this;
+    //    }
 
-        // If theres more than one instance
-        else if (GM_Script != null)
-        {
-            Destroy(gameObject);
-        }
-    }
+    //    // If theres more than one instance
+    //    else if (GM_Script != null)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()

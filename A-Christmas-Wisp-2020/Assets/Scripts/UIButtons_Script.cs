@@ -74,6 +74,7 @@ public class UIButtons_Script : MonoBehaviour
         // Play the animation
         FindObjectOfType<GameManager_Script>().ResetTime();
         SceneSwitchAnim.SetBool("Game_1", false);
+        AkSoundEngine.StopAll();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Main_Menu");
     }

@@ -14,10 +14,11 @@ public class Mouse_Cursor_Script : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Wisp Sprite
         //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined; // keep confined in the game window
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         direction = (cursorPos - transform.position).normalized;
