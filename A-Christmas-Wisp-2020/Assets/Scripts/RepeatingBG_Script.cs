@@ -7,12 +7,6 @@ public class RepeatingBG_Script : MonoBehaviour
     public float speed;
     public float endX, startX;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {

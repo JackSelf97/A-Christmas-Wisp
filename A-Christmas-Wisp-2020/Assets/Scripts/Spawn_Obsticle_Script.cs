@@ -8,9 +8,18 @@ public class Spawn_Obsticle_Script : MonoBehaviour
     private bool sentObs = false;
     public float timer, timeLimit = 4;
 
+    public enum Spawners
+    {
+        lowerSpawner,
+        upperSpawner,
+    }
+
+    public Spawners spawner;
+
     // Update is called once per frame
     void Update()
     {
+        // Lower Spawn
         if (sentObs == false)
         {
             // Pick a random number
@@ -33,6 +42,7 @@ public class Spawn_Obsticle_Script : MonoBehaviour
             sentObs = true;
         }
 
+
         // Timer
         timer += Time.deltaTime;
         if (timer >= timeLimit)
@@ -40,24 +50,58 @@ public class Spawn_Obsticle_Script : MonoBehaviour
             // Spawn Small
             if (randomObs == smallObs)
             {
-                Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 1.35f), Quaternion.identity);
+                if (spawner == Spawners.lowerSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = false;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 1.35f), Quaternion.identity);
+                }
+                else if (spawner == Spawners.upperSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = true;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+                }
+
                 timer = 0;
                 sentObs = false;
             }
             // Spawn Medium
             if (randomObs == medObs)
             {
-                Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 1.85f), Quaternion.identity);
+                if (spawner == Spawners.lowerSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = false;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 1.85f), Quaternion.identity);
+                }
+                else if (spawner == Spawners.upperSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = true;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+                }
+
                 timer = 0;
                 sentObs = false;
             }
             // Spawn Big
             if (randomObs == bigObs)
             {
-                Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 2.35f), Quaternion.identity);
+                if (spawner == Spawners.lowerSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = false;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y + 2.35f), Quaternion.identity);
+                }
+                else if (spawner == Spawners.upperSpawner)
+                {
+                    randomObs.GetComponent<SpriteRenderer>().flipY = true;
+                    Instantiate(randomObs, new Vector2(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+                }
+
                 timer = 0;
                 sentObs = false;
             }
         }
     }
 }
+
+
+    
+
