@@ -912,8 +912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: 308}
-  m_SizeDelta: {x: 800, y: 160}
+  m_AnchoredPosition: {x: 669.86, y: 308}
+  m_SizeDelta: {x: 1039.73, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948470566
 MonoBehaviour:
@@ -948,7 +948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A Christmas Wisp
+  m_Text: A Half-Baked Christmas Wisp
 --- !u!222 &948470567
 CanvasRenderer:
   m_ObjectHideFlags: 0

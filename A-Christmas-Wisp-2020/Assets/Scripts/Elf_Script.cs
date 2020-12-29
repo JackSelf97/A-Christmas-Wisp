@@ -13,7 +13,7 @@ public class Elf_Script : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         // Die if out of bounds
-        if (transform.position.x <= -15)
+        if (transform.position.x <= -15 || transform.position.y <= -15)
         {
             Destroy(gameObject);
         }

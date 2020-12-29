@@ -13,6 +13,7 @@ public class UIButtons_Script : MonoBehaviour
         Play,
         Controls,
         Quit,
+        Menu,
     }
 
     public Buttons button;
@@ -27,11 +28,24 @@ public class UIButtons_Script : MonoBehaviour
     {
         StartCoroutine("Play");
     }
+    public void ClickMenu()
+    {
+        StartCoroutine("Menu");
+    }
 
     public void GetAllTheButtons()
     {
-        // Get the animator
-        SceneSwitchAnim = GameObject.Find("Menu_Canvas/LoadingAnim").GetComponent<Animator>();
+        if (SceneManager.GetActiveScene().name == "Game_1")
+        {
+            // Get the animator
+            SceneSwitchAnim = GameObject.Find("UI_Canvas/LoadingAnim").GetComponent<Animator>();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Main_Menu")
+        {
+            // Get the animator
+            SceneSwitchAnim = GameObject.Find("Menu_Canvas/LoadingAnim").GetComponent<Animator>();
+        }
 
         // Get the buttons
         if (button == Buttons.Play)
@@ -39,13 +53,28 @@ public class UIButtons_Script : MonoBehaviour
             Button gameButton = gameObject.GetComponent<Button>();
             gameButton.onClick.AddListener(ClickPlay);
         }
+        // Get the buttons
+        if (button == Buttons.Menu)
+        {
+            Button gameButton = gameObject.GetComponent<Button>();
+            gameButton.onClick.AddListener(ClickMenu);
+        }
     }
 
     private IEnumerator Play()
     {
         // Play the animation
-        SceneSwitchAnim.SetTrigger("SwitchScene");
-        yield return new WaitForSeconds(5f);
+        SceneSwitchAnim.SetBool("Menu", true);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game_1");
+    }
+
+    private IEnumerator Menu()
+    {
+        // Play the animation
+        FindObjectOfType<GameManager_Script>().ResetTime();
+        SceneSwitchAnim.SetBool("Game_1", false);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Main_Menu");
     }
 }

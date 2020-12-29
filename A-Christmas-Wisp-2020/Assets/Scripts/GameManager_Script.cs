@@ -9,12 +9,18 @@ public class GameManager_Script : MonoBehaviour
     public Text scoreText;
     public int score;
     public GameManager_Script GM_Script;
+    public Player_Script P_Script;
+    private Canvas GameOver_Canvas;
+    private Text deathText;
+    public bool timeFlow = true;
+    private bool checkOnce = false;
+    public Animator SceneSwitchAnim;
 
     // Update speed
     public float globalTimer, globalTimeLimit = 10;
     public GameObject elf, small_Obs, med_Obs, big_Obs;
     public GameObject BG_1, BG_2, BG_3, BG_4, BG_5, BG_6;
-    public GameObject[] BG;
+
 
     // READ-ONLY Speeds
     public int speedBoostLevel = 0;
@@ -43,8 +49,18 @@ public class GameManager_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (SceneManager.GetActiveScene().name == "Game_1")
         {
+            // Get the player script
+            P_Script = FindObjectOfType<Player_Script>();
+
+            // Get the animator
+            SceneSwitchAnim = GameObject.Find("UI_Canvas/LoadingAnim").GetComponent<Animator>();
+
+            // Play the animation
+            SceneSwitchAnim.SetBool("Game_1", true);
+
             scoreText = GameObject.Find("UI_Canvas/Kills").GetComponent<Text>();
 
             //Start the speeds
@@ -60,15 +76,29 @@ public class GameManager_Script : MonoBehaviour
             BG_5.GetComponent<RepeatingBG_Script>().speed = 2;
             BG_6.GetComponent<RepeatingBG_Script>().speed = 2;
 
+
+            // Get the screen
+            GameOver_Canvas = GameObject.Find("UI_Canvas/GameOver_Panel").GetComponent<Canvas>();
+            deathText = GameObject.Find("UI_Canvas/GameOver_Panel/Score").GetComponent<Text>();
+            // Off
+            GameOver_Canvas.enabled = false;
         }
 
+        
+
     }
+
+
+
 
     // Update is called once per frame
     void Update()
     {
+        
         if (SceneManager.GetActiveScene().name == "Game_1")
         {
+            
+
             // Score
             scoreText.text = "Elves Killed " + score;
 
@@ -86,6 +116,25 @@ public class GameManager_Script : MonoBehaviour
                 globalTimer = 0;
             }
 
+            // Death
+            if (P_Script.currentHealth <= 0 && checkOnce == false)
+            {
+                //Gameover
+                GameOver_Canvas.enabled = true;
+                deathText.text = "" + score;
+                timeFlow = false;
+                checkOnce = true;
+
+            }
+
+            if (timeFlow == false)
+            {
+                Time.timeScale = 0;
+            }
+            else if (timeFlow == true)
+            {
+                Time.timeScale = 1;
+            }
         }
     }
 
@@ -120,5 +169,11 @@ public class GameManager_Script : MonoBehaviour
             Debug.Log("Increase Speed!");
             increaseCheck = false;
         }
+    }
+
+    public void ResetTime()
+    {
+        //P_Script.currentHealth = P_Script.maxHealth;
+        timeFlow = true;
     }
 }

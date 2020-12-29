@@ -17,7 +17,7 @@ public class Mouse_Cursor_Script : MonoBehaviour
     void Update()
     {
         // Wisp Sprite
-        Cursor.visible = false;
+        //Cursor.visible = false;
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         direction = (cursorPos - transform.position).normalized;

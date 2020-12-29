@@ -43,5 +43,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea59b6cd8bcc1946b7f7231ba4ccdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 5676310914891358227, guid: 7f01bc440c2e6b44090e160a4f23400e, type: 3}
   score: 0
+  GM_Script: {fileID: 0}
+  P_Script: {fileID: 0}
+  timeFlow: 1
+  SceneSwitchAnim: {fileID: 0}
+  globalTimer: 0
+  globalTimeLimit: 10
+  elf: {fileID: 7755244379115939536, guid: 9da899d3c25c2ae45b1f357578de17a7, type: 3}
+  small_Obs: {fileID: 3661913932129615922, guid: fad1fa47323680940b96400d1d995d32, type: 3}
+  med_Obs: {fileID: 1045060963467274443, guid: 8c2b6e2c03f8c644ab1cfb4c5eee1194, type: 3}
+  big_Obs: {fileID: 5547961733046614456, guid: d9d033d11fee3b942b05162d0449bb48, type: 3}
+  BG_1: {fileID: 0}
+  BG_2: {fileID: 0}
+  BG_3: {fileID: 0}
+  BG_4: {fileID: 0}
+  BG_5: {fileID: 0}
+  BG_6: {fileID: 0}
+  speedBoostLevel: 0
+  currentElfSpeed: 4
+  currentObsticleSpeed: 4
+  currentBG1_2Speed: 7
+  currentBG3_4Speed: 4
+  currentBG5_6Speed: 2
+  increaseCheck: 0
