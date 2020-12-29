@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	379467460	Jingle Bells	C:\Users\SelfB\Desktop\Game Projects\A Christmas Wisp\A-Christmas-Wisp\A-Christmas-Wisp-2020\A-Christmas-Wisp-2020_WwiseProject\.cache\Mac\SFX\Jingle Bells_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jingle Bells		18008128
+

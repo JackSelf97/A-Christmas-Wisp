@@ -97,7 +97,12 @@ public class GameManager_Script : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Game_1")
         {
-            
+            // Get the player script
+            P_Script = FindObjectOfType<Player_Script>();
+
+            // Get the screen
+            GameOver_Canvas = GameObject.Find("UI_Canvas/GameOver_Panel").GetComponent<Canvas>();
+            deathText = GameObject.Find("UI_Canvas/GameOver_Panel/Score").GetComponent<Text>();
 
             // Score
             scoreText.text = "Elves Killed " + score;
