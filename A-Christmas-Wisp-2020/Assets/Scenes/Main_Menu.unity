@@ -343,8 +343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: -52}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 550, y: -52}
+  m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437318252
 MonoBehaviour:
@@ -1188,7 +1188,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 60}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283463044
 MonoBehaviour:
@@ -1223,7 +1223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hardcore Mode
+  m_Text: Elfin' Catastrophe Mode
 --- !u!222 &1283463045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Developed by SelfMadeGames
+  m_Text: Developed by S-ElfMadeGames
 --- !u!222 &1365608601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1539,7 +1539,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &1397919525
 RectTransform:
@@ -1633,6 +1633,7 @@ GameObject:
   - component: {fileID: 1586342974}
   - component: {fileID: 1586342977}
   - component: {fileID: 1586342976}
+  - component: {fileID: 1586342978}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -1764,6 +1765,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1586342978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586342972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2375b0ea9ae5141478efcefe2fc1184e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneSwitchAnim: {fileID: 0}
+  button: 2
 --- !u!1001 &1678648917
 PrefabInstance:
   m_ObjectHideFlags: 0

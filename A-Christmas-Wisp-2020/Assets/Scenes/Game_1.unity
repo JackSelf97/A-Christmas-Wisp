@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190147285
 GameObject:
@@ -895,6 +895,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5737490261823337763, guid: 5382d49a98d6830408ea93252cc57b4d, type: 3}
   m_PrefabInstance: {fileID: 5737490262674329801}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1380044583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7948985863008424676, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: timeLimit
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424678, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_Name
+      value: Obsticle_Spawner_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
 --- !u!1 &1384455213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,11 +1356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7948985863008424676, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: timeLimit
-      value: 4
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7948985863008424678, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: m_Name
-      value: Obsticle_Spawner_1
+      value: Obsticle_Spawner_2
       objectReference: {fileID: 0}
     - target: {fileID: 7948985863008424678, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: m_IsActive
@@ -1482,7 +1543,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8225228373731245842, guid: 4e85106ef58a6df4985f8ab9e4561ace, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8225228373731245842, guid: 4e85106ef58a6df4985f8ab9e4561ace, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1586,7 +1647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017802643
 GameObject:
@@ -2290,11 +2351,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7948985863008424676, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: timeLimit
-      value: 4
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7948985863008424678, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: m_Name
-      value: Obsticle_Spawner_0
+      value: Obsticle_Spawner_1
       objectReference: {fileID: 0}
     - target: {fileID: 7948985863008424679, guid: 4ce9ad2625e4ca446ae31d67acf667ac, type: 3}
       propertyPath: m_RootOrder

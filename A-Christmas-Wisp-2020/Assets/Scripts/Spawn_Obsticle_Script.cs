@@ -6,7 +6,7 @@ public class Spawn_Obsticle_Script : MonoBehaviour
 {
     public GameObject smallObs, medObs, bigObs, randomObs;
     private bool sentObs = false;
-    public float timer, timeLimit = 4;
+    public float timer, timeLimit = 3.5f;
 
     public enum Spawners
     {
@@ -19,6 +19,10 @@ public class Spawn_Obsticle_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Clamping the spawn rate
+        timeLimit = Mathf.Clamp(timeLimit, 0.5f, 3.5f);
+
+
         // Lower Spawn
         if (sentObs == false)
         {

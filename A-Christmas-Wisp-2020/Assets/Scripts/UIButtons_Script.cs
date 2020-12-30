@@ -11,7 +11,7 @@ public class UIButtons_Script : MonoBehaviour
     public enum Buttons
     {
         Play,
-        Controls,
+        Hardcore,
         Quit,
         Menu,
     }
@@ -31,6 +31,10 @@ public class UIButtons_Script : MonoBehaviour
     public void ClickMenu()
     {
         StartCoroutine("Menu");
+    }
+    public void ClickQuit()
+    {
+        StartCoroutine("Quit");
     }
 
     public void GetAllTheButtons()
@@ -59,6 +63,11 @@ public class UIButtons_Script : MonoBehaviour
             Button gameButton = gameObject.GetComponent<Button>();
             gameButton.onClick.AddListener(ClickMenu);
         }
+        if (button == Buttons.Quit)
+        {
+            Button gameButton = gameObject.GetComponent<Button>();
+            gameButton.onClick.AddListener(ClickQuit);
+        }
     }
 
     private IEnumerator Play()
@@ -75,7 +84,16 @@ public class UIButtons_Script : MonoBehaviour
         FindObjectOfType<GameManager_Script>().ResetTime();
         SceneSwitchAnim.SetBool("Game_1", false);
         AkSoundEngine.StopAll();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene("Main_Menu");
     }
+
+    private IEnumerator Quit()
+    {
+        // Play the animation
+        SceneSwitchAnim.SetBool("Menu", true);
+        yield return new WaitForSeconds(2f);
+        Application.Quit();
+    }
+
 }

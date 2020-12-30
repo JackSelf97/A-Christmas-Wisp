@@ -20,13 +20,14 @@ public class GameManager_Script : MonoBehaviour
     public float globalTimer, globalTimeLimit = 10;
     public GameObject elf, small_Obs, med_Obs, big_Obs;
     public GameObject BG_1, BG_2, BG_3, BG_4, BG_5, BG_6;
+    public GameObject obs_spawner1, obs_spawner2, obs_spawner3;
 
 
     // READ-ONLY Speeds
     public int speedBoostLevel = 0;
-    public int currentElfSpeed = 4;
-    public int currentObsticleSpeed = 4;
-    public int currentBG1_2Speed = 7, currentBG3_4Speed = 4, currentBG5_6Speed = 2;
+    public float currentElfSpeed = 4;
+    public float currentObsticleSpeed = 4;
+    public float currentBG1_2Speed = 7, currentBG3_4Speed = 4, currentBG5_6Speed = 2;
 
     public bool increaseCheck = false;
 
@@ -63,18 +64,22 @@ public class GameManager_Script : MonoBehaviour
 
             scoreText = GameObject.Find("UI_Canvas/Kills").GetComponent<Text>();
 
+            obs_spawner1 = GameObject.Find("Obsticle_Spawner_1");
+            obs_spawner2 = GameObject.Find("Obsticle_Spawner_2");
+            obs_spawner3 = GameObject.Find("Obsticle_Spawner_3");
+
             //Start the speeds
             // NOTE - Grab the elf and obsticle prefabs (as they spawn), otherwise assign BG from the hirecahy and NOT thier prefabs
-            elf.GetComponent<Elf_Script>().speed = 4;
-            small_Obs.GetComponent<Obsticle_Script>().speed = 4;
-            med_Obs.GetComponent<Obsticle_Script>().speed = 4;
-            big_Obs.GetComponent<Obsticle_Script>().speed = 4;
-            BG_1.GetComponent<RepeatingBG_Script>().speed = 7;
-            BG_2.GetComponent<RepeatingBG_Script>().speed = 7;
-            BG_3.GetComponent<RepeatingBG_Script>().speed = 4;
-            BG_4.GetComponent<RepeatingBG_Script>().speed = 4;
-            BG_5.GetComponent<RepeatingBG_Script>().speed = 2;
-            BG_6.GetComponent<RepeatingBG_Script>().speed = 2;
+            elf.GetComponent<Elf_Script>().speed = 4f;
+            small_Obs.GetComponent<Obsticle_Script>().speed = 4f;
+            med_Obs.GetComponent<Obsticle_Script>().speed = 4f;
+            big_Obs.GetComponent<Obsticle_Script>().speed = 4f;
+            BG_1.GetComponent<RepeatingBG_Script>().speed = 7f;
+            BG_2.GetComponent<RepeatingBG_Script>().speed = 7f;
+            BG_3.GetComponent<RepeatingBG_Script>().speed = 4f;
+            BG_4.GetComponent<RepeatingBG_Script>().speed = 4f;
+            BG_5.GetComponent<RepeatingBG_Script>().speed = 2f;
+            BG_6.GetComponent<RepeatingBG_Script>().speed = 2f;
 
 
             // Get the screen
@@ -149,12 +154,13 @@ public class GameManager_Script : MonoBehaviour
         {
             // Elf
             elf.GetComponent<Elf_Script>().speed++;
-            currentElfSpeed++;
+            currentElfSpeed += 0.5f;
 
             // Obsticles
-            small_Obs.GetComponent<Obsticle_Script>().speed++;
-            med_Obs.GetComponent<Obsticle_Script>().speed++;
-            big_Obs.GetComponent<Obsticle_Script>().speed++;
+            small_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
+            med_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
+            big_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
+            
             currentObsticleSpeed++;
 
             // Background
@@ -167,6 +173,10 @@ public class GameManager_Script : MonoBehaviour
             currentBG1_2Speed++;
             currentBG3_4Speed++;
             currentBG5_6Speed++;
+
+            obs_spawner1.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
+            obs_spawner2.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
+            obs_spawner3.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
 
 
             // Checks
