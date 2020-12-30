@@ -145,13 +145,13 @@ public class GameManager_Script : MonoBehaviour
         if (increaseCheck == true)
         {
             // Elf
-            elf.GetComponent<Elf_Script>().speed += 0.5f;
+            elf.GetComponent<Elf_Script>().speed += 0.4f;
             currentElfSpeed++;
 
             // Obsticles
-            small_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
-            med_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
-            big_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
+            small_Obs.GetComponent<Obsticle_Script>().speed += 0.3f;
+            med_Obs.GetComponent<Obsticle_Script>().speed += 0.3f;
+            big_Obs.GetComponent<Obsticle_Script>().speed += 0.3f;
             currentObsticleSpeed++;
 
             // Background does not need to speed up (will tear the illusion)
