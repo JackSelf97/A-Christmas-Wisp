@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Script : MonoBehaviour
 {
+    // Variables
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar_Script healthbar;
@@ -13,12 +14,6 @@ public class Player_Script : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void TakeDamage(int damage)

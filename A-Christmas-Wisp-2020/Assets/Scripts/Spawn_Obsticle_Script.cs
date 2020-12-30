@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Spawn_Obsticle_Script : MonoBehaviour
 {
+    // Variables
     public GameObject smallObs, medObs, bigObs, randomObs;
     private bool sentObs = false;
-    public float timer, timeLimit = 3.5f;
+    public float timer, timeLimit = 4f;
 
+    // Identify the spawners
     public enum Spawners
     {
         lowerSpawner,
@@ -17,13 +19,12 @@ public class Spawn_Obsticle_Script : MonoBehaviour
     public Spawners spawner;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Clamping the spawn rate
-        timeLimit = Mathf.Clamp(timeLimit, 0.5f, 3.5f);
+        timeLimit = Mathf.Clamp(timeLimit, 0.5f, 4f);
 
-
-        // Lower Spawn
+        // Random spawn
         if (sentObs == false)
         {
             // Pick a random number
@@ -45,7 +46,6 @@ public class Spawn_Obsticle_Script : MonoBehaviour
 
             sentObs = true;
         }
-
 
         // Timer
         timer += Time.deltaTime;

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Elf_Script : MonoBehaviour
 {
+    // Variables
     public float speed;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         // Move left
         transform.Translate(Vector2.left * speed * Time.deltaTime);

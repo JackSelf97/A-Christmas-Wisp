@@ -23,8 +23,6 @@ public class Mouse_Cursor_Script : MonoBehaviour
 
         direction = (cursorPos - transform.position).normalized;
         rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
-
-        //transform.position = cursorPos;
     }
 
     // Killing the Elves
@@ -33,6 +31,8 @@ public class Mouse_Cursor_Script : MonoBehaviour
         if (other.gameObject.tag == "Elf")
         {
             FindObjectOfType<GameManager_Script>().score++;
+            // Play sound
+            AkSoundEngine.PostEvent("Pop", gameObject);
             Destroy(other.gameObject);
         }
     }

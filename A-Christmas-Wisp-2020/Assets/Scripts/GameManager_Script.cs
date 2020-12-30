@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager_Script : MonoBehaviour
 {
+    // Variables
     public Text scoreText;
     public int score;
     public GameManager_Script GM_Script;
@@ -22,13 +23,11 @@ public class GameManager_Script : MonoBehaviour
     public GameObject BG_1, BG_2, BG_3, BG_4, BG_5, BG_6;
     public GameObject obs_spawner1, obs_spawner2, obs_spawner3;
 
-
     // READ-ONLY Speeds
     public int speedBoostLevel = 0;
     public float currentElfSpeed = 4;
     public float currentObsticleSpeed = 4;
     public float currentBG1_2Speed = 7, currentBG3_4Speed = 4, currentBG5_6Speed = 2;
-
     public bool increaseCheck = false;
 
     // Only have one GameManager at any one time
@@ -50,7 +49,7 @@ public class GameManager_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // X-Mas Mode (Game_1)
         if (SceneManager.GetActiveScene().name == "Game_1")
         {
             // Get the player script
@@ -88,13 +87,7 @@ public class GameManager_Script : MonoBehaviour
             // Off
             GameOver_Canvas.enabled = false;
         }
-
-        
-
     }
-
-
-
 
     // Update is called once per frame
     void Update()
@@ -102,12 +95,12 @@ public class GameManager_Script : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Game_1")
         {
-            // Get the player script
-            P_Script = FindObjectOfType<Player_Script>();
+            //// Get the player script
+            //P_Script = FindObjectOfType<Player_Script>();
 
-            // Get the screen
-            GameOver_Canvas = GameObject.Find("UI_Canvas/GameOver_Panel").GetComponent<Canvas>();
-            deathText = GameObject.Find("UI_Canvas/GameOver_Panel/Score").GetComponent<Text>();
+            //// Get the screen
+            //GameOver_Canvas = GameObject.Find("UI_Canvas/GameOver_Panel").GetComponent<Canvas>();
+            //deathText = GameObject.Find("UI_Canvas/GameOver_Panel/Score").GetComponent<Text>();
 
             // Score
             scoreText.text = "Elves Killed " + score;
@@ -134,7 +127,6 @@ public class GameManager_Script : MonoBehaviour
                 deathText.text = "" + score;
                 timeFlow = false;
                 checkOnce = true;
-
             }
 
             if (timeFlow == false)
@@ -153,27 +145,21 @@ public class GameManager_Script : MonoBehaviour
         if (increaseCheck == true)
         {
             // Elf
-            elf.GetComponent<Elf_Script>().speed++;
-            currentElfSpeed += 0.5f;
+            elf.GetComponent<Elf_Script>().speed += 0.5f;
+            currentElfSpeed++;
 
             // Obsticles
             small_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
             med_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
             big_Obs.GetComponent<Obsticle_Script>().speed += 0.5f;
-            
             currentObsticleSpeed++;
 
-            // Background
-            //BG_1.GetComponent<RepeatingBG_Script>().speed++;
-            //BG_2.GetComponent<RepeatingBG_Script>().speed++;
-            //BG_3.GetComponent<RepeatingBG_Script>().speed++;
-            //BG_4.GetComponent<RepeatingBG_Script>().speed++;
-            //BG_5.GetComponent<RepeatingBG_Script>().speed++;
-            //BG_6.GetComponent<RepeatingBG_Script>().speed++;
+            // Background does not need to speed up (will tear the illusion)
             currentBG1_2Speed++;
             currentBG3_4Speed++;
             currentBG5_6Speed++;
 
+            // Spawn rate (has been clamped already)
             obs_spawner1.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
             obs_spawner2.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
             obs_spawner3.GetComponent<Spawn_Obsticle_Script>().timeLimit -= 0.1f;
@@ -188,7 +174,6 @@ public class GameManager_Script : MonoBehaviour
 
     public void ResetTime()
     {
-        //P_Script.currentHealth = P_Script.maxHealth;
         timeFlow = true;
     }
 }

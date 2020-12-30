@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons_Script : MonoBehaviour
 {
+    // Animators
     public Animator SceneSwitchAnim;
 
+    // Button Enums
     public enum Buttons
     {
         Play,
@@ -24,6 +26,8 @@ public class UIButtons_Script : MonoBehaviour
         GetAllTheButtons();
     }
 
+    // Functions
+    #region Button Functions (w/ coroutines)
     public void ClickPlay()
     {
         StartCoroutine("Play");
@@ -37,6 +41,9 @@ public class UIButtons_Script : MonoBehaviour
         StartCoroutine("Quit");
     }
 
+    #endregion
+
+    // Main Function
     public void GetAllTheButtons()
     {
         if (SceneManager.GetActiveScene().name == "Game_1")
@@ -70,9 +77,11 @@ public class UIButtons_Script : MonoBehaviour
         }
     }
 
+    // Coroutines
+    #region Button Coroutines
+
     private IEnumerator Play()
     {
-        // Play the animation
         SceneSwitchAnim.SetBool("Menu", true);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game_1");
@@ -80,7 +89,6 @@ public class UIButtons_Script : MonoBehaviour
 
     private IEnumerator Menu()
     {
-        // Play the animation
         FindObjectOfType<GameManager_Script>().ResetTime();
         SceneSwitchAnim.SetBool("Game_1", false);
         AkSoundEngine.StopAll();
@@ -90,10 +98,11 @@ public class UIButtons_Script : MonoBehaviour
 
     private IEnumerator Quit()
     {
-        // Play the animation
         SceneSwitchAnim.SetBool("Menu", true);
         yield return new WaitForSeconds(2f);
         Application.Quit();
     }
+
+    #endregion
 
 }

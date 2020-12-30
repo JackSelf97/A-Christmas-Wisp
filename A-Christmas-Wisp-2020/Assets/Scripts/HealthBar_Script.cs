@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HealthBar_Script : MonoBehaviour
 {
+    // Health Bar (Brackeys Video: https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=637s&ab_channel=Brackeys)
+    // Variables
     public Slider slider;
 
     // Max Health (Player)

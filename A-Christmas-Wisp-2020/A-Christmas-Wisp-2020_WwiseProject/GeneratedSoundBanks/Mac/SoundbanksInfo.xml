@@ -22,8 +22,13 @@
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="Infinite"/>
+				<Event Id="1081563622" Name="Pop" ObjectPath="\Events\Default Work Unit\Pop" DurationType="OneShot" DurationMin="0.188662" DurationMax="0.188662"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="75707160" Language="SFX">
+					<ShortName>Pop.wav</ShortName>
+					<Path>SFX\Pop_10C4C929.wem</Path>
+				</File>
 				<File Id="379467460" Language="SFX">
 					<ShortName>Jingle Bells.wav</ShortName>
 					<Path>SFX\Jingle Bells_D79FB2B7.wem</Path>
