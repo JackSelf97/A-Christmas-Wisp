@@ -50,7 +50,7 @@ public class GameManager_Script : MonoBehaviour
     void Start()
     {
         // X-Mas Mode (Game_1)
-        if (SceneManager.GetActiveScene().name == "Game_1")
+        if (SceneManager.GetActiveScene().name == "Game_1" || SceneManager.GetActiveScene().name == "Game_2")
         {
             // Get the player script
             P_Script = FindObjectOfType<Player_Script>();
@@ -93,7 +93,7 @@ public class GameManager_Script : MonoBehaviour
     void Update()
     {
         
-        if (SceneManager.GetActiveScene().name == "Game_1")
+        if (SceneManager.GetActiveScene().name == "Game_1" || SceneManager.GetActiveScene().name == "Game_2")
         {
             //// Get the player script
             //P_Script = FindObjectOfType<Player_Script>();

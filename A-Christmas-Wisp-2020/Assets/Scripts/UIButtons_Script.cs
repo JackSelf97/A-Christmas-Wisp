@@ -32,6 +32,10 @@ public class UIButtons_Script : MonoBehaviour
     {
         StartCoroutine("Play");
     }
+    public void ClickHardcore()
+    {
+        StartCoroutine("Hardcore");
+    }
     public void ClickMenu()
     {
         StartCoroutine("Menu");
@@ -46,7 +50,7 @@ public class UIButtons_Script : MonoBehaviour
     // Main Function
     public void GetAllTheButtons()
     {
-        if (SceneManager.GetActiveScene().name == "Game_1")
+        if (SceneManager.GetActiveScene().name == "Game_1" || SceneManager.GetActiveScene().name == "Game_2")
         {
             // Get the animator
             SceneSwitchAnim = GameObject.Find("UI_Canvas/LoadingAnim").GetComponent<Animator>();
@@ -63,6 +67,11 @@ public class UIButtons_Script : MonoBehaviour
         {
             Button gameButton = gameObject.GetComponent<Button>();
             gameButton.onClick.AddListener(ClickPlay);
+        }
+        if (button == Buttons.Hardcore)
+        {
+            Button gameButton = gameObject.GetComponent<Button>();
+            gameButton.onClick.AddListener(ClickHardcore);
         }
         // Get the buttons
         if (button == Buttons.Menu)
@@ -85,6 +94,13 @@ public class UIButtons_Script : MonoBehaviour
         SceneSwitchAnim.SetBool("Menu", true);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game_1");
+    }
+
+    private IEnumerator Hardcore()
+    {
+        SceneSwitchAnim.SetBool("Menu", true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Game_2");
     }
 
     private IEnumerator Menu()

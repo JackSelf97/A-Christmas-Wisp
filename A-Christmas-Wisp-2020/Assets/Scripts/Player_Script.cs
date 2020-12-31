@@ -8,12 +8,14 @@ public class Player_Script : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar_Script healthbar;
+    public Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        playerAnim = GameObject.Find("Wisp").GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
@@ -28,6 +30,16 @@ public class Player_Script : MonoBehaviour
         {
             TakeDamage(1);
             healthbar.SetHealth(currentHealth);
+            playerAnim.SetBool("Damage", true);
         }
     }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Obsticle")
+        {
+            playerAnim.SetBool("Damage", false);
+        }
+    }
+
 }
