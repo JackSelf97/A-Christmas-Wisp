@@ -92,6 +92,8 @@ public class UIButtons_Script : MonoBehaviour
     private IEnumerator Play()
     {
         SceneSwitchAnim.SetBool("Menu", true);
+        // Play sound
+        AkSoundEngine.PostEvent("Click", gameObject);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game_1");
     }
@@ -99,6 +101,8 @@ public class UIButtons_Script : MonoBehaviour
     private IEnumerator Hardcore()
     {
         SceneSwitchAnim.SetBool("Menu", true);
+        // Play sound
+        AkSoundEngine.PostEvent("Click", gameObject);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Game_2");
     }
@@ -107,14 +111,18 @@ public class UIButtons_Script : MonoBehaviour
     {
         FindObjectOfType<GameManager_Script>().ResetTime();
         SceneSwitchAnim.SetBool("Game_1", false);
-        AkSoundEngine.StopAll();
+        // Play sound
+        AkSoundEngine.PostEvent("Click", gameObject);
         yield return new WaitForSeconds(2.5f);
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene("Main_Menu");
     }
 
     private IEnumerator Quit()
     {
         SceneSwitchAnim.SetBool("Menu", true);
+        // Play sound
+        AkSoundEngine.PostEvent("Click", gameObject);
         yield return new WaitForSeconds(2f);
         Application.Quit();
     }

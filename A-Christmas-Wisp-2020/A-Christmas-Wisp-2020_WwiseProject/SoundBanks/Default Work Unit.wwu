@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{EFDE07A8-C570-45CF-BD20-20394B38CB5D}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Jingle Bells" ID="{FAAF639C-8E78-411E-8D29-DA8090F09BB3}" WorkUnitID="{134867BD-C905-44AA-A6B3-87357E0C2C29}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Click" ID="{D3814860-3334-4747-A271-199B82593CA9}" WorkUnitID="{134867BD-C905-44AA-A6B3-87357E0C2C29}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pop" ID="{2DA879AD-2EB9-47EA-B318-A4FA29C9F6A4}" WorkUnitID="{134867BD-C905-44AA-A6B3-87357E0C2C29}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

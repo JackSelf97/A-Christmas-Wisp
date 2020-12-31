@@ -49,6 +49,25 @@
 						<ActiveSource Name="Pop" ID="{9807A103-39A5-435D-89E1-84CBC715E0FA}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Click" ID="{D3814860-3334-4747-A271-199B82593CA9}" ShortID="890308538">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A3DE9441-A70D-457E-97A8-3BF3FE6062A8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{378A1BE5-40E0-41AC-9AF1-756C7266B6EC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Click" ID="{4E55E896-2749-41C3-800A-B8E5FCD89A6D}" ShortID="780175099">
+							<Language>SFX</Language>
+							<AudioFile>Click.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Click" ID="{4E55E896-2749-41C3-800A-B8E5FCD89A6D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

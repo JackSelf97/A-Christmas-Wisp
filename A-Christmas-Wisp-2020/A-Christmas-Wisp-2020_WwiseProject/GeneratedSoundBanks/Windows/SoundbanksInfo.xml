@@ -21,6 +21,7 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Default Work Unit\Click" DurationType="OneShot" DurationMin="1.953605" DurationMax="1.953605"/>
 				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="Infinite"/>
 				<Event Id="1081563622" Name="Pop" ObjectPath="\Events\Default Work Unit\Pop" DurationType="OneShot" DurationMin="0.188662" DurationMax="0.188662"/>
 			</IncludedEvents>
@@ -32,6 +33,10 @@
 				<File Id="379467460" Language="SFX">
 					<ShortName>Jingle Bells.wav</ShortName>
 					<Path>SFX\Jingle Bells_D79FB2B7.wem</Path>
+				</File>
+				<File Id="780175099" Language="SFX">
+					<ShortName>Click.wav</ShortName>
+					<Path>SFX\Click_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

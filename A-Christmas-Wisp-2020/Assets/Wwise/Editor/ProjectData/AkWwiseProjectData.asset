@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 2214d0e1ac559643a8b784d56fdfd5e0
     GuidInternal: 
-    m_lastTime: -8585923487275668934
+    m_lastTime: -8585921625673579392
     List:
     - name: Main
       guid: a807deef70c5cf45bd2020394b38cb5d
@@ -47,8 +47,20 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4dcb787115930547bd7b8a719ef6634c
     GuidInternal: 
-    m_lastTime: -8585923488817493718
+    m_lastTime: -8585921625673265373
     List:
+    - name: Click
+      guid: ef7d4d6dcd8a834f9e133b7318d18607
+      id: 1584507803
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Click
+        ObjectType: 3
+      Path: Default Work Unit\Click
+      maxAttenuation: 0
+      maxDuration: 1.953605
+      minDuration: 1.953605
     - name: Music
       guid: 11074ba49d93724e814013095c2b09fe
       id: 3991942870
@@ -61,6 +73,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Pop
+      guid: c4547b3c3cabb04baa78a2b1ff9a39bb
+      id: 1081563622
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pop
+        ObjectType: 3
+      Path: Default Work Unit\Pop
+      maxAttenuation: 0
+      maxDuration: 0.188662
+      minDuration: 0.188662
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
