@@ -1,10 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1081563622	Pop			\Default Work Unit\Pop	
 	1584507803	Click			\Default Work Unit\Click	
+	2385386241	Merry_Christmas			\Default Work Unit\Merry_Christmas	
 	3991942870	Music			\Default Work Unit\Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	75707160	Pop	C:\Users\SelfB\Desktop\Game Projects\A Christmas Wisp\A-Christmas-Wisp\A-Christmas-Wisp-2020\A-Christmas-Wisp-2020_WwiseProject\.cache\Mac\SFX\Pop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pop		16704
 	379467460	Jingle Bells	C:\Users\SelfB\Desktop\Game Projects\A Christmas Wisp\A-Christmas-Wisp\A-Christmas-Wisp-2020\A-Christmas-Wisp-2020_WwiseProject\.cache\Mac\SFX\Jingle Bells_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jingle Bells		18008128
+	633162098	Merry Christmas!	C:\Users\SelfB\Desktop\Game Projects\A Christmas Wisp\A-Christmas-Wisp\A-Christmas-Wisp-2020\A-Christmas-Wisp-2020_WwiseProject\.cache\Mac\SFX\Merry Christmas!_400C7122.wem		\Actor-Mixer Hierarchy\Default Work Unit\Merry Christmas!		1056232
 	780175099	Click	C:\Users\SelfB\Desktop\Game Projects\A Christmas Wisp\A-Christmas-Wisp\A-Christmas-Wisp-2020\A-Christmas-Wisp-2020_WwiseProject\.cache\Mac\SFX\Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Click		344680
 

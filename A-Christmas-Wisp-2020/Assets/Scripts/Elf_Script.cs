@@ -8,7 +8,7 @@ public class Elf_Script : MonoBehaviour
     public float speed;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Move left
         transform.Translate(Vector2.left * speed * Time.deltaTime);

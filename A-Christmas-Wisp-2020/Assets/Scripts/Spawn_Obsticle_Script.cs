@@ -29,7 +29,7 @@ public class Spawn_Obsticle_Script : MonoBehaviour
         {
             // Pick a random number
             int randomNum = Random.Range(1, 4);
-            Debug.Log(randomNum);
+            //Debug.Log(randomNum);
 
             if (randomNum == 1)
             {

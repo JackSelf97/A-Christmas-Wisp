@@ -36,6 +36,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Merry_Christmas" ID="{73C00E82-5114-4D70-8F0F-00FBF5AA84C6}">
+					<ChildrenList>
+						<Action Name="" ID="{68B199FA-849C-45CA-84FB-D9711AE8AF11}" ShortID="751349187">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Merry Christmas!" ID="{4F167121-8825-4397-A119-69A15A7DB902}" WorkUnitID="{134867BD-C905-44AA-A6B3-87357E0C2C29}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

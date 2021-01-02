@@ -50,6 +50,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Click" ID="{D3814860-3334-4747-A271-199B82593CA9}" ShortID="890308538">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A3DE9441-A70D-457E-97A8-3BF3FE6062A8}"/>
@@ -66,6 +73,37 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Click" ID="{4E55E896-2749-41C3-800A-B8E5FCD89A6D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Merry Christmas!" ID="{4F167121-8825-4397-A119-69A15A7DB902}" ShortID="871537102">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A3DE9441-A70D-457E-97A8-3BF3FE6062A8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{378A1BE5-40E0-41AC-9AF1-756C7266B6EC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Merry Christmas!" ID="{5D502A31-E59C-45E7-BECD-7F1FD607EB4C}" ShortID="633162098">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.7"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Merry Christmas!.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Merry Christmas!" ID="{5D502A31-E59C-45E7-BECD-7F1FD607EB4C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

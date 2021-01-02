@@ -95,13 +95,6 @@ public class GameManager_Script : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "Game_1" || SceneManager.GetActiveScene().name == "Game_2")
         {
-            //// Get the player script
-            //P_Script = FindObjectOfType<Player_Script>();
-
-            //// Get the screen
-            //GameOver_Canvas = GameObject.Find("UI_Canvas/GameOver_Panel").GetComponent<Canvas>();
-            //deathText = GameObject.Find("UI_Canvas/GameOver_Panel/Score").GetComponent<Text>();
-
             // Score
             scoreText.text = "Elves Killed " + score;
 
@@ -125,6 +118,8 @@ public class GameManager_Script : MonoBehaviour
                 //Gameover
                 GameOver_Canvas.enabled = true;
                 deathText.text = "" + score;
+                // Play sound
+                AkSoundEngine.PostEvent("Merry_Christmas", gameObject);
                 timeFlow = false;
                 checkOnce = true;
             }

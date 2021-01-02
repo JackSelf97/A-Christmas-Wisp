@@ -22,6 +22,7 @@
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Default Work Unit\Click" DurationType="OneShot" DurationMin="1.953605" DurationMax="1.953605"/>
+				<Event Id="2385386241" Name="Merry_Christmas" ObjectPath="\Events\Default Work Unit\Merry_Christmas" DurationType="OneShot" DurationMin="5.987347" DurationMax="5.987347"/>
 				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="Infinite"/>
 				<Event Id="1081563622" Name="Pop" ObjectPath="\Events\Default Work Unit\Pop" DurationType="OneShot" DurationMin="0.188662" DurationMax="0.188662"/>
 			</IncludedEvents>
@@ -33,6 +34,10 @@
 				<File Id="379467460" Language="SFX">
 					<ShortName>Jingle Bells.wav</ShortName>
 					<Path>SFX\Jingle Bells_D79FB2B7.wem</Path>
+				</File>
+				<File Id="633162098" Language="SFX">
+					<ShortName>Merry Christmas!.wav</ShortName>
+					<Path>SFX\Merry Christmas!_400C7122.wem</Path>
 				</File>
 				<File Id="780175099" Language="SFX">
 					<ShortName>Click.wav</ShortName>
